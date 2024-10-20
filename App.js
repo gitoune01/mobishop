@@ -1,20 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, SafeAreaView, View } from 'react-native';
+import Splash from './src/screens/Splash';
+import { styles } from './src/screens/Splash/styles';
+import Config from 'react-native-config';
+import Signup from './src/screens/auth/Signup';
+import Signin from './src/screens/auth/Signin';
+// import { GoogleSignin } from '@react-native-google-signin/google-signin';
+
+
+// const WEB_CLIENT_ID = Config.WEB_CLIENT_ID
 
 export default function App() {
+  // useEffects(() =>{
+  //   GoogleSignin.configure({
+  //     webClientId: WEB_CLIENT_ID
+  //   })
+
+  // },[]);
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={styles.container}>
+   
+      {/* <Splash /> */}
+      <Signin />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -26,4 +26,4 @@ export default function App() {
       <Signin />
     </SafeAreaView>
   );
-}
+}git
